@@ -14,6 +14,7 @@ public class CoolerSpaceAlien extends SpaceAlien implements ZapsWithSlime{
         System.out.println("hi there");
     }
 
+    @Override
     public String doSlimeZap(int numHumans){
         if (numHumans < 2){
             return "Squelch";
@@ -22,8 +23,18 @@ public class CoolerSpaceAlien extends SpaceAlien implements ZapsWithSlime{
             return "SQUELCHHH!!";
         }
     }
+
+    @Override
     public String slimeWholeEarth(){
         return "Tooitsch";
+    }
+
+    public static void main(String[] args) {
+        CoolerSpaceAlien a1 = new CoolerSpaceAlien("Mars", 2000.0, 10);
+        a1.doGreeting();
+        System.out.println(a1.doSlimeZap(1));
+        System.out.println(a1.doSlimeZap(2));
+        System.out.println(a1.slimeWholeEarth());
     }
 
 }
